@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/career_note
+    username: admin
+    password: Mint!00!99!
+    driverClassName: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
+ 

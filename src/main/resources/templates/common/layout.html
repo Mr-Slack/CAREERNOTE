@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" 
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org" 
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="utf-8" /> 
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>CAREER NOTE</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="all" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+
+  <!-- header -->
+  <header th:replace="/common/header::header">sample header</header>
+  
+  <!-- contents -->
+  <section layout:fragment="contents">
+    <p>Fake layout content</p>
+  </section>
+  
+  <!-- footer --> 
+  <footer layout:replace="/common/footer::footer">sample footer</footer>
+   
+  <!-- BeforeJQuery script-->
+  <div layout:fragment="beforejQuery" th:remove="tag"></div>
+    
+  <!-- Bootstrap JQuery -->
+  <!-- ================================================== -->
+  <script src="../../static/vendor/jquery/jquery.min.js" th:src="@{./vendor/jquery/jquery.min.js}"></script>
+  <script src="../../static/vendor/popper/popper.min.js" th:src="@{./vendor/popper/popper.min.js}"></script>
+  <script src="../../static/vendor/bootstrap/js/bootstrap.min.js" th:src="@{./vendor/bootstrap/js/bootstrap.min.js}"></script>
+  
+  <!-- AfterJQuery script-->
+  <div layout:fragment="moreScripts" th:remove="tag"></div>
+  
+</body>
+</html>
